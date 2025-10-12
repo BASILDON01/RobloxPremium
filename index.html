@@ -453,22 +453,56 @@
             100% { transform: translateX(100%) translateY(100%); }
         }
 
-        /* Specific gradients for items */
-        .legendary-bg {
-            background: linear-gradient(135deg, #FFD700, #FFA500);
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+        /* Specific gradients for items - Unified by game */
+        /* Adopt Me - Purple theme */
+        .adoptme .legendary-bg {
+            background: linear-gradient(135deg, #8B5CF6, #A855F7);
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+        }
+        
+        .adoptme .mythic-bg {
+            background: linear-gradient(135deg, #7C3AED, #8B5CF6);
+            box-shadow: 0 0 30px rgba(124, 58, 237, 0.4);
+        }
+        
+        .adoptme .godly-bg {
+            background: linear-gradient(135deg, #6D28D9, #7C3AED);
+            box-shadow: 0 0 30px rgba(109, 40, 217, 0.4);
         }
 
-        .mythic-bg {
-            background: linear-gradient(135deg, #E91E63, #9C27B0);
-            box-shadow: 0 0 30px rgba(233, 30, 99, 0.4);
+        /* Murder Mystery 2 - Red theme */
+        .mm2 .legendary-bg {
+            background: linear-gradient(135deg, #EF4444, #F87171);
+            box-shadow: 0 0 30px rgba(239, 68, 68, 0.4);
+        }
+        
+        .mm2 .mythic-bg {
+            background: linear-gradient(135deg, #DC2626, #EF4444);
+            box-shadow: 0 0 30px rgba(220, 38, 38, 0.4);
+        }
+        
+        .mm2 .godly-bg {
+            background: linear-gradient(135deg, #B91C1C, #DC2626);
+            box-shadow: 0 0 30px rgba(185, 28, 28, 0.4);
         }
 
-        .godly-bg {
-            background: linear-gradient(135deg, #00BCD4, #3F51B5);
-            box-shadow: 0 0 30px rgba(0, 188, 212, 0.4);
+        /* Grow a Garden - Green theme */
+        .grow .legendary-bg {
+            background: linear-gradient(135deg, #10B981, #34D399);
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
+        }
+        
+        .grow .mythic-bg {
+            background: linear-gradient(135deg, #059669, #10B981);
+            box-shadow: 0 0 30px rgba(5, 150, 105, 0.4);
+        }
+        
+        .grow .godly-bg {
+            background: linear-gradient(135deg, #047857, #059669);
+            box-shadow: 0 0 30px rgba(4, 120, 87, 0.4);
         }
 
+        /* Keep chroma background for special items */
         .chroma-bg {
             background: linear-gradient(45deg, 
                 #ff0000, #ff7700, #ffdd00, #00ff00, 
@@ -483,7 +517,7 @@
             50% { background-position: 100% 50%; }
         }
 
-        /* Rarity badge */
+        /* Rarity badge - Unified by game */
         .rarity-badge {
             display: inline-block;
             padding: 6px 16px;
@@ -495,18 +529,51 @@
             margin-bottom: 12px;
         }
 
-        .rarity-legendary {
-            background: linear-gradient(135deg, #FFD700, #FFA500);
-            color: #000;
-        }
-
-        .rarity-mythic {
-            background: linear-gradient(135deg, #E91E63, #9C27B0);
+        /* Adopt Me badges - Purple theme */
+        .adoptme .rarity-legendary {
+            background: linear-gradient(135deg, #8B5CF6, #A855F7);
             color: #fff;
         }
 
-        .rarity-godly {
-            background: linear-gradient(135deg, #00BCD4, #3F51B5);
+        .adoptme .rarity-mythic {
+            background: linear-gradient(135deg, #7C3AED, #8B5CF6);
+            color: #fff;
+        }
+
+        .adoptme .rarity-godly {
+            background: linear-gradient(135deg, #6D28D9, #7C3AED);
+            color: #fff;
+        }
+
+        /* Murder Mystery 2 badges - Red theme */
+        .mm2 .rarity-legendary {
+            background: linear-gradient(135deg, #EF4444, #F87171);
+            color: #fff;
+        }
+
+        .mm2 .rarity-mythic {
+            background: linear-gradient(135deg, #DC2626, #EF4444);
+            color: #fff;
+        }
+
+        .mm2 .rarity-godly {
+            background: linear-gradient(135deg, #B91C1C, #DC2626);
+            color: #fff;
+        }
+
+        /* Grow a Garden badges - Green theme */
+        .grow .rarity-legendary {
+            background: linear-gradient(135deg, #10B981, #34D399);
+            color: #fff;
+        }
+
+        .grow .rarity-mythic {
+            background: linear-gradient(135deg, #059669, #10B981);
+            color: #fff;
+        }
+
+        .grow .rarity-godly {
+            background: linear-gradient(135deg, #047857, #059669);
             color: #fff;
         }
 
@@ -980,7 +1047,7 @@
         </div>
 
         <!-- Adopt Me Content -->
-        <div id="adoptme" class="game-content active">
+        <div id="adoptme" class="game-content active adoptme">
             <h2 class="section-title" data-i18n="adoptmeTitle">Легендарные питомцы Adopt Me</h2>
             <div class="items-grid">
                 <div class="item-card" onclick="openClaimModal('Shadow Dragon', 'adoptme')">
@@ -1023,7 +1090,7 @@
         </div>
 
         <!-- Murder Mystery 2 Content -->
-        <div id="mm2" class="game-content">
+        <div id="mm2" class="game-content mm2">
             <h2 class="section-title" data-i18n="mm2Title">Godly ножи Murder Mystery 2</h2>
             <div class="items-grid">
                 <div class="item-card" onclick="openClaimModal('Chroma Darkbringer', 'mm2')">
@@ -1066,7 +1133,7 @@
         </div>
 
         <!-- Grow a Garden Content -->
-        <div id="psx" class="game-content">
+        <div id="psx" class="game-content grow">
             <h2 class="section-title" data-i18n="psxTitle">Эксклюзивные предметы Grow a Garden</h2>
             <div class="items-grid">
                 <div class="item-card" onclick="openClaimModal('Raccoon', 'psx')">
